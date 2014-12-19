@@ -11,6 +11,13 @@ function assert(actual,expected) {
 
 }
 
+function resetBoard() {
+  Game.board = [[null, null, null],[null, null, null],[null, null, null]];
+  Game.currentPiece = 'X'
+  Game.done = false
+  Game.winner = null
+}
+printif = false
 assert(Game.board instanceof Array, true)
 assert(Game.board.length, 3)
 assert(Game.board[0] instanceof Array, true)
@@ -28,6 +35,21 @@ assert(Game.board[1][0], 'O')
 
 assert( Game.addPiece({row:1, col:1}), 'X')
 
+resetBoard()
+Game.addPiece({row:0, col:0})
+Game.addPiece({row:1, col:1})
+Game.addPiece({row:0, col:1})
+Game.addPiece({row:1, col:2})
+Game.addPiece({row:0, col:2})
+assert(Game.done, true)
+assert(Game.winner, 'X')
+
+resetBoard()
+Game.addPiece({row:0, col:0})
+Game.addPiece({row:0, col:1})
+Game.addPiece({row:0, col:2})
+assert(Game.done, false)
+assert(Game.winner, null)
 
 console.log(successes + " tests passed.")
 console.log(failures + " tests failed.")
