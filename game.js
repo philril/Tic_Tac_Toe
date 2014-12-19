@@ -9,6 +9,7 @@ Game = {
     if (this.board[row][col] === null){
       this.board[row][col] = this.fetchCurrentPiece()
     }
+    return this.board[row][col]
   },
 
   fetchCurrentPiece: function() {
