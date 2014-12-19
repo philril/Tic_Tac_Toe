@@ -1,3 +1,13 @@
-p {
-  background-color: red
+.board {
+  width:600px;
+  height:600px;
+  background-color: gray;
+}
+
+.cell {
+  border: 1px solid black;
+  float: left;
+  width: 200px;
+  height:200px;
+  box-sizing: border-box;
 }
