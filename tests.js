@@ -11,5 +11,13 @@ function assert(actual,expected) {
 
 }
 
+assert(Game.board instanceof Array, true)
+assert(Game.board.length, 3)
+assert(Game.board[0] instanceof Array, true)
+assert(Game.board[0].length, 3)
+assert(Game.board[0][0], null)
+
+
+
 console.log(successes + " tests passed.")
 console.log(failures + " tests failed.")
