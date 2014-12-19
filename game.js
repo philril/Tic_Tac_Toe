@@ -6,7 +6,9 @@ Game = {
   addPiece: function(obj) {
     var row = obj.row
     var col = obj.col
-    this.board[row][col] = this.fetchCurrentPiece()
+    if (this.board[row][col] === null){
+      this.board[row][col] = this.fetchCurrentPiece()
+    }
   },
 
   fetchCurrentPiece: function() {

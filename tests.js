@@ -23,5 +23,9 @@ assert(Game.board[1][2],'X')
 Game.addPiece({row:1, col:0})
 assert(Game.board[1][0], 'O')
 
+Game.addPiece({row:1, col:0})
+assert(Game.board[1][0], 'O')
+
+
 console.log(successes + " tests passed.")
 console.log(failures + " tests failed.")
