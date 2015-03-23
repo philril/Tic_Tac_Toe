@@ -1,4 +1,3 @@
-## Tic Tac Toe
+# Tic Tac Toe
 
-
-Javascript implementation of tic tac toe. no server required!
+Javascript Tic-Tac-Toe game, built with focus on Object Oriented principles. No server required!
